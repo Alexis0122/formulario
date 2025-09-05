@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Formulario de Accidente de Tránsito</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div
+        class="card"
+        role="region"
+        aria-label="Formulario de accidente de tránsito"
+      >
+        <div class="head">
+          <h1 class="title">Formulario de Accidente de Tránsito</h1>
+        </div>
+
+        <form id="accident-form" novalidate>
+          <div class="field sm-12">
+            <label for="logoUpload">Logo</label>
+            <div id="logoDropzone" class="logoPreview">
+              Arrastra un logo aquí o haz clic para seleccionar
+            </div>
+            <input
+              type="file"
+              id="logoUpload"
+              accept="image/*"
+              style="display: none"
+            />
+          </div>
+          <!-- Identificación -->
+          <div class="field sm-6">
+            <label for="nombre" class="req">Nombre</label>
+            <input
+              id="nombre"
+              name="nombre"
+              type="text"
+              placeholder="Nombre completo"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div class="field sm-6">
+            <label for="cedula" class="req">Cédula</label>
+            <input
+              id="cedula"
+              name="cedula"
+              type="text"
+              inputmode="numeric"
+              placeholder="000-0000000-0"
+              required
+            />
+          </div>
+
+          <!-- Datos del evento -->
+          <div class="field sm-6">
+            <label for="acta">No. Acta de Tránsito</label>
+            <input
+              id="acta"
+              name="acta"
+              type="text"
+              placeholder="Número de acta"
+            />
+          </div>
+          <div class="field sm-3">
+            <label for="fecha" class="req">Fecha Accidente</label>
+            <input
+              id="fecha"
+              name="fecha"
+              type="text"
+              placeholder="dd/mm/aaaa"
+              required
+            />
+          </div>
+          <div class="field sm-3">
+            <label for="lugar" class="req">Lugar del accidente</label>
+            <input
+              id="lugar"
+              name="lugar"
+              type="text"
+              placeholder="Ciudad / Dirección"
+              required
+            />
+          </div>
+
+          <!-- Vehículo -->
+          <div class="field sm-4">
+            <label for="tipo" class="req">Tipo Vehículo</label>
+            <input
+              id="tipo"
+              name="tipo"
+              type="text"
+              placeholder="Ej. Automóvil"
+              required
+            />
+          </div>
+          <div class="field sm-4">
+            <label for="marca">Marca</label>
+            <input
+              id="marca"
+              name="marca"
+              type="text"
+              placeholder="Ej. Toyota"
+            />
+          </div>
+          <div class="field sm-4">
+            <label for="modelo">Modelo</label>
+            <input
+              id="modelo"
+              name="modelo"
+              type="text"
+              placeholder="Ej. Corolla"
+            />
+          </div>
+
+          <div class="field sm-3">
+            <label for="color">Color</label>
+            <input id="color" name="color" type="text" placeholder="Ej. Gris" />
+          </div>
+          <div class="field sm-3">
+            <label for="placa">Placa</label>
+            <input id="placa" name="placa" type="text" placeholder="ABC-1234" />
+          </div>
+          <div class="field sm-3">
+            <label for="chasis">Chasis</label>
+            <input
+              id="chasis"
+              name="chasis"
+              type="text"
+              placeholder="Número de chasis"
+            />
+          </div>
+          <div class="field sm-3">
+            <label for="matricula">No. Matrícula</label>
+            <input
+              id="matricula"
+              name="matricula"
+              type="text"
+              placeholder="Número de matrícula"
+            />
+          </div>
+
+          <!-- Póliza -->
+          <div class="field sm-6">
+            <label for="poliza">No. Póliza</label>
+            <input
+              id="poliza"
+              name="poliza"
+              type="text"
+              placeholder="Número de póliza"
+            />
+          </div>
+          <div class="field sm-6">
+            <label for="vigencia">Vigencia Póliza</label>
+            <input
+              id="vigencia"
+              name="vigencia"
+              type="text"
+              placeholder="dd/mm/aaaa"
+            />
+          </div>
+
+          <div class="actions">
+            <button type="reset" class="btn secondary">Cancelar</button>
+            <button type="submit" class="btn">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
